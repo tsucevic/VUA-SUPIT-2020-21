@@ -19,28 +19,19 @@
 }
 
 /*Navigation bar style*/
-.navBarContainer{
-    width:100%;
-    background-color: var(--kinda-black);
-
-    position: fixed;
-    z-index: 9999;
-    height: 10vh;
-
-    display: block;
-    justify-content: space-around;
-}
 .navbar-custom{
     background-color: var(--kinda-black);
-
+    display: block;
+    z-index: 1020;
+    width: 100%;
 }
-nav{
 
+.navbar-custom .navbar-brand{
+    padding: 0;
+    margin-bottom: 0.325rem;
+    margin-top: 0.325rem;
 }
-
 .logo{
-    height: auto;
-    position: absolute;
-    margin-left: 2vw;
-
+    height: 5vh;
+    min-height: 40px;
 }
