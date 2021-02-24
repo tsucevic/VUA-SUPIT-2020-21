@@ -35,3 +35,17 @@
     height: 5vh;
     min-height: 40px;
 }
+
+/*About banner style*/
+.bannerImage{
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    margin: 0;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../res/img/kampus-iz-zraka-min-1.jpg");
+}
+
