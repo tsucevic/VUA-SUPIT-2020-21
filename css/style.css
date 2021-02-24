@@ -1,0 +1,46 @@
+:root{
+    /*Predefined variables. Palette.*/
+    --bright-orange:#E1700E;
+    --cyslamen:#C30E60;
+    --kinda-black:#151515;
+    --black:#000;
+    --base-gradient: linear-gradient(285deg, #C30E60, #E1700E);
+
+    --fonts-base: 'Roboto', sans-serif, 'Arial', sans-serif;
+    --fonts-size-nav: 1.8rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: var(--fonts-base);
+}
+
+/*Navigation bar style*/
+.navBarContainer{
+    width:100%;
+    background-color: var(--kinda-black);
+
+    position: fixed;
+    z-index: 9999;
+    height: 10vh;
+
+    display: block;
+    justify-content: space-around;
+}
+.navbar-custom{
+    background-color: var(--kinda-black);
+
+}
+nav{
+
+}
+
+.logo{
+    height: auto;
+    position: absolute;
+    margin-left: 2vw;
+
+}
