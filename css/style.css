@@ -58,6 +58,7 @@
     height: fit-content;
     align-content: center;
     text-align: center;
+    margin-top: 3vh;
 }
 
 .mainHeading h1{
@@ -80,6 +81,52 @@
     border-bottom-style: solid;
 }
 
+/*Subheading*/
+.subheading{
+    position: relative;
+    height: fit-content;
+    align-content: center;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+.subheading h2{
+    font-family: var(--fonts-base) !important;
+    color: var(--color-cyslamen);
+}
+
+.content{
+    width: 70%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cursive{
+    font-family: 'Great Vibes', cursive;
+}
+
+.cursive *{
+    font-family: 'Great Vibes', cursive;
+}
+
+.content p{
+    font-size: 2rem;
+}
+
+.card{
+    height: 100%;
+}
+
+.card-title{
+    text-transform: uppercase;
+}
+
+.card-body{
+    padding: 1.5rem 1.5rem;
+}
+
+/*Animations*/
 .animation-slideFromBot{
     animation: slideFromBot 0.8s forwards;
     bottom: -300%;
