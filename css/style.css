@@ -11,12 +11,18 @@
     --fonts-size-nav: 1.8rem;
 }
 
+/*Smoothscroll*/
+html{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
     font-family: var(--fonts-base);
+    scroll-margin-top: 90px;
 }
 
 /*Navigation bar style*/
@@ -94,7 +100,11 @@
     font-family: var(--fonts-base) !important;
     color: var(--color-cyslamen);
 }
+.novosti h2{
+    margin-bottom: 2vh;
+}
 
+/*Content*/
 .content{
     width: 70%;
     position: relative;
@@ -124,6 +134,52 @@
 
 .card-body{
     padding: 1.5rem 1.5rem;
+}
+
+.rowSpacer .row{
+    margin-bottom: 1.5rem;
+}
+
+.date{
+    color: var(--color-cyslamen);
+}
+
+/*Maps*/
+.location .card-title{
+    font-size: 1.25rem;
+}
+
+.location .card-text{
+    font-size: 1rem;
+}
+
+.location .card{
+    height: max-content;
+}
+
+.location h2{
+    margin-bottom: 2vh;
+}
+
+.mapBackground{
+    padding-top: 2vh;
+    background-image: url("../res/img/kakoDoNas.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/*Footer*/
+.footer{
+    padding-top: 14rem;
+    padding-bottom: 10rem;
+    min-height: 570px;
+
+    background-image: url("../res/img/zaiskri-bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 /*Animations*/

@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +11,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 
+    <!--Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!--Lightbox-->
+    <link href="lightbox/lightbox.min.css" rel="stylesheet">
+
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+    <!-- latest jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
-
-    <script src="js/smoothScroll.js"></script>
 
     <title>Algebra - SUPIT - Projektni zadatak</title>
 </head>
 <body>
 
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top" id="navbar">
     <div class="container-fluid">
         <!--Navbar Logo-->
         <a class="navbar-brand" href="#">
@@ -34,17 +47,58 @@
         <!--Nav for normal displays-->
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
-                <a class="nav-link" href="about.html">O nama</a>
-                <a class="nav-link" href="news.html">Novosti</a>
+                <a class="nav-link " aria-current="page" href="index.html"><i class="bi bi-house-door-fill"></i> Home</a>
+                <a class="nav-link active" aria-current="page" href="about.html#aboutUs">O nama</a>
+                <a class="nav-link" href="about.html#novosti">Novosti</a>
                 <a class="nav-link" href="collegePlan.html">Nastavni plan</a>
-                <a class="nav-link" href="contact.html">Kontakt</a>
+                <a class="nav-link" href="#contactModal" data-bs-toggle="modal" data-bs-target="#contactModal">Kontakt</a>
             </div>
         </div>
     </div>
 </nav>
 
+<!-- Modal Contact-->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="contactModalLabel">Kontakt</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="kontaktFulek" action="http://www.fulek.com/VUA/SUPIT/ContactUs">
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Name: </label>
+                        <input type="text" class="form-control" id="inputName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail1" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp" name="email">
+                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="newsletter" name="newsletter">
+                        <label class="form-check-label" for="newsletter">Newsletter?</label>
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="importance" name="importance">
+                        <label class="form-check-label" for="importance">Important?</label>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-text">Message</span>
+                        <textarea class="form-control" aria-label="Message" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<!--Footer-->
+<div class="mt-auto footer">
+</div>
 
 <!--Bootstrap JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
