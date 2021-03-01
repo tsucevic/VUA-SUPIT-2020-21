@@ -217,3 +217,14 @@ html{
     border-top-width: 3px;
     border-top-style: solid;
 }
+
+/*Lightbox fix sizing*/
+.lightbox-wrapper{
+    max-width: 95%;
+}
+.lightbox-content{
+    overflow: hidden;
+}
+.lightbox-image{
+    width: 100%;
+}
