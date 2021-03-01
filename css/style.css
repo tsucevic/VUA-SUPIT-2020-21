@@ -172,14 +172,29 @@ html{
 
 /*Footer*/
 .footer{
-    padding-top: 14rem;
-    padding-bottom: 10rem;
-    min-height: 570px;
-
+    padding: 0;
+    height: 610px;
+    min-height: 100px;
+    max-height: 30vh;
     background-image: url("../res/img/zaiskri-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+.footerMotto{
+    height: 100%;
+    position: relative;
+    width: max-content;
+    margin: auto;
+    align-content: center;
+    padding: 2vh 0;
+    vertical-align: center;
+}
+
+.footerMotto .typewriterText{
+    vertical-align: middle;
+    text-align: center;
 }
 
 /*Animations*/
@@ -189,4 +204,16 @@ html{
 }
 @keyframes slideFromBot {
     100% {bottom:0;}
+}
+
+/*Nastavni plan specific*/
+.nastavniPlan{
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.footRow{
+    border-color:var(--color-cyslamen);
+    border-top-width: 3px;
+    border-top-style: solid;
 }
