@@ -218,6 +218,20 @@ html{
     border-top-style: solid;
 }
 
+.ui-autocomplete {
+    min-height: 100px;
+    height: 10vh;
+    max-height: 300px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+    height: 100px;
+
 /*Lightbox fix sizing*/
 .lightbox-wrapper{
     max-width: 95%;
