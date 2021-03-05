@@ -1,22 +1,23 @@
-:root{
+:root {
     /*Predefined variables. Palette.*/
-    --color-white:#FFF;
-    --color-bright-orange:#E1700E;
-    --color-cyslamen:#C30E60;
-    --color-kinda-black:#151515;
-    --color-black:#000;
+    --color-white: #FFF;
+    --color-bright-orange: #E1700E;
+    --color-cyslamen: #C30E60;
+    --color-kinda-black: #151515;
+    --color-black: #000;
     --base-gradient: linear-gradient(265deg, #C30E60, #E1700E);
+    --base-gradient-dark: linear-gradient(265deg, #9a0c4d, #c3620e);
 
     --fonts-base: 'Roboto', sans-serif, 'Arial', sans-serif;
     --fonts-size-nav: 1.8rem;
 }
 
 /*Smoothscroll*/
-html{
+html {
     scroll-behavior: smooth;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +27,7 @@ html{
 }
 
 /*Navigation bar style*/
-.navbar-custom{
+.navbar-custom {
     background-color: var(--color-kinda-black);
     display: block;
     z-index: 1020;
@@ -34,24 +35,37 @@ html{
 }
 
 
-.navbar-custom .navbar-brand{
+.navbar-custom .navbar-brand {
     padding: 0;
     margin-bottom: 0.325rem;
     margin-top: 0.325rem;
 }
-.logo{
+
+.logo {
     height: 5vh;
     min-height: 40px;
 }
 
+#contactModal .btn-primary {
+    background-image: var(--base-gradient);
+    border-color: transparent;
+    border-image: var(--base-gradient);
+}
+
+#contactModal .btn-primary:hover {
+    background-image: var(--base-gradient-dark);
+    border-color: transparent;
+    border-image: var(--base-gradient-dark);
+}
+
 /*About banner style*/
-.bannerImage{
+.bannerImage {
     width: 100%;
     height: 20vh;
     overflow: hidden;
     margin: 0;
 
-    position:relative;
+    position: relative;
 
     background-position: center;
     background-size: cover;
@@ -60,21 +74,21 @@ html{
 }
 
 /*Main heading style*/
-.mainHeading{
+.mainHeading {
     height: fit-content;
     align-content: center;
     text-align: center;
     margin-top: 3vh;
 }
 
-.mainHeading h1{
+.mainHeading h1 {
     font-family: var(--fonts-base) !important;
     font-weight: 800 !important;
 
 
 }
 
-.underlineDivider{
+.underlineDivider {
     width: 80%;
     position: relative;
     margin-left: auto;
@@ -88,80 +102,129 @@ html{
 }
 
 /*Subheading*/
-.subheading{
+.subheading {
     position: relative;
     height: fit-content;
     align-content: center;
     text-align: center;
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
-.subheading h2{
+.subheading h2 {
     font-family: var(--fonts-base) !important;
     color: var(--color-cyslamen);
 }
-.novosti h2{
+
+.novosti h2 {
     margin-bottom: 2vh;
 }
 
 /*Content*/
-.content{
+.content {
     width: 70%;
     position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
-.cursive{
+.cursive {
     font-family: 'Great Vibes', cursive;
 }
 
-.cursive *{
+.cursive * {
     font-family: 'Great Vibes', cursive;
 }
 
-.content p{
+.content p {
     font-size: 2rem;
 }
 
-.card{
+.card {
     height: 100%;
 }
 
-.card-title{
+.card-title {
     text-transform: uppercase;
 }
 
-.card-body{
+.card-body {
     padding: 1.5rem 1.5rem;
 }
 
-.rowSpacer .row{
+.rowSpacer .row {
     margin-bottom: 1.5rem;
 }
 
-.date{
+.date {
     color: var(--color-cyslamen);
 }
 
+/*Pictures*/
+.gallery {
+    margin-top: 3vh;
+    padding: 5vh 0;
+}
+
+.gallery .accordion-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50vh;
+}
+
+.gallery .accordion-wrap .item {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.8s ease;
+}
+
+.gallery .accordion-wrap .item:hover {
+    flex: 7;
+}
+
+
+.gallery .accordion-wrap .item:first-of-type {
+    background-image: url('../res/img/algebra03.jpeg');
+}
+
+.gallery .accordion-wrap .item:nth-of-type(2) {
+    background-image: url('../res/img/algebra01.jpeg');
+}
+
+.gallery .accordion-wrap .item:nth-of-type(3) {
+    background-image: url('../res/img/algebra04.jpeg');
+}
+
+.gallery .accordion-wrap .item:nth-of-type(4) {
+    background-image: url('../res/img/algebra02.jpeg');
+}
+
+.gallery .accordion-wrap .item:last-of-type {
+    background-image: url('../res/img/algebra05.jpeg');
+}
+
+
 /*Maps*/
-.location .card-title{
+.location .card-title {
     font-size: 1.25rem;
 }
 
-.location .card-text{
+.location .card-text {
     font-size: 1rem;
 }
 
-.location .card{
+.location .card {
     height: max-content;
 }
 
-.location h2{
+.location h2 {
     margin-bottom: 2vh;
 }
 
-.mapBackground{
+.mapBackground {
     padding-top: 2vh;
     background-image: url("../res/img/kakoDoNas.jpg");
     background-size: cover;
@@ -171,7 +234,7 @@ html{
 }
 
 /*Footer*/
-.footer{
+.footer {
     padding: 0;
     height: 610px;
     min-height: 100px;
@@ -182,7 +245,7 @@ html{
     overflow: hidden;
 }
 
-.footerMotto{
+.footerMotto {
     height: 100%;
     position: relative;
     width: max-content;
@@ -192,28 +255,31 @@ html{
     vertical-align: center;
 }
 
-.footerMotto .typewriterText{
+.footerMotto .typewriterText {
     vertical-align: middle;
     text-align: center;
 }
 
 /*Animations*/
-.animation-slideFromBot{
+.animation-slideFromBot {
     animation: slideFromBot 0.8s forwards;
     bottom: -300%;
 }
+
 @keyframes slideFromBot {
-    100% {bottom:0;}
+    100% {
+        bottom: 0;
+    }
 }
 
 /*Nastavni plan specific*/
-.nastavniPlan{
-    margin-top: 5vh;
-    margin-bottom: 5vh;
+.nastavniPlan {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
-.footRow{
-    border-color:var(--color-cyslamen);
+.footRow {
+    border-color: var(--color-cyslamen);
     border-top-width: 3px;
     border-top-style: solid;
 }
@@ -226,6 +292,7 @@ html{
     /* prevent horizontal scrollbar */
     overflow-x: hidden;
 }
+
 /* IE 6 doesn't support max-height
  * we use height instead, but this forces the menu to always be this tall
  */
@@ -234,12 +301,14 @@ html{
 }
 
 /*Lightbox fix sizing*/
-.lightbox-wrapper{
+.lightbox-wrapper {
     max-width: 95%;
 }
-.lightbox-content{
+
+.lightbox-content {
     overflow: hidden;
 }
-.lightbox-image{
+
+.lightbox-image {
     width: 100%;
 }
